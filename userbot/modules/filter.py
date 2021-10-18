@@ -39,9 +39,9 @@ async def filter_incoming_handler(handler):
         pass
 
 
-@register(outgoing=True, pattern=r"^.filter (.*)")
+@register(outgoing=True, pattern=r"^.addfilter (.*)")
 async def add_new_filter(new_handler):
-    """ For .filter command, allows adding new filters in a chat """
+    """ For .addfilter command, allows adding new filters in a chat """
     try:
         from userbot.modules.sql_helper.filter_sql import add_filter
     except AttributeError:
@@ -143,7 +143,7 @@ async def filters_active(event):
 
 CMD_HELP.update({
     "filter":
-    "`.filters`\
+    "`.addfilters`\
     \nUsage: Melihat filter userbot yang aktif di obrolan.\
     \n\n`.filter` <keyword> <balasan> atau balas ke pesan ketik .filter <keyword>\
     \nUsage: Membuat filter di obrolan.\

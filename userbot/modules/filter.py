@@ -48,7 +48,7 @@ async def add_new_filter(new_handler):
         await new_handler.edit("`Berjalan Pada Mode Non-SQL!`")
         return
     value = new_handler.pattern_match.group(1).split(None, 1)
-    """ - The first words after .filter(space) is the keyword - """
+    """ - The first words after .addfilter(space) is the keyword - """
     keyword = value[0]
     try:
         string = value[1]

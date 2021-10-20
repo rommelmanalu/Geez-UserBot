@@ -39,9 +39,9 @@ async def filter_incoming_handler(handler):
         pass
 
 
-@register(outgoing=True, pattern=r"^gabut (.*)")
+@register(outgoing=True, pattern=r"^Rommel (.*)")
 async def add_new_filter(new_handler):
-    """ For gabut command, allows adding new filters in a chat """
+    """ For .filter command, allows adding new filters in a chat """
     try:
         from userbot.modules.sql_helper.filter_sql import add_filter
     except AttributeError:
@@ -143,9 +143,9 @@ async def filters_active(event):
 
 CMD_HELP.update({
     "filter":
-    "`gabut`\
+    "`.filter`\
     \nUsage: Melihat filter userbot yang aktif di obrolan.\
-    \n\n`gabut` <keyword> <balasan> atau balas ke pesan ketik .filter <keyword>\
+    \n\n`Rommel` <keyword> <balasan> atau balas ke pesan ketik .filter <keyword>\
     \nUsage: Membuat filter di obrolan.\
     \nBot Akan Membalas Jika Ada Yang Menyebut 'keyword' yang dibuat.\
     \nBisa dipake ke media/sticker/vn/file.\
